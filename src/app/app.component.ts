@@ -4,6 +4,9 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Task } from './models/task.model';
 
+const settings = {/* your settings... */ timestampsInSnapshots: true};
+
+
 
 @Component({
   selector: 'app-root',

@@ -6,7 +6,6 @@ export const environment = {
     databaseURL: 'https://angular-tasks-b2747.firebaseio.com',
     projectId: 'angular-tasks-b2747',
     storageBucket: 'angular-tasks-b2747.appspot.com',
-    messagingSenderId: '985997532508',
-    timestampsInSnapshots: true
+    messagingSenderId: '985997532508'
   }
 };
