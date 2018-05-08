@@ -18,7 +18,7 @@ export class TaskItemComponent {
   */ 
 
   executeAction(action: string): void{
-    this[action].EventEmitter(this.task); // tipo de um if/else ver na session3/aula15 do Plinio
+    this[action].emit(this.task); // tipo de um if/else ver na session3/aula15 do Plinio
   }
 
 }

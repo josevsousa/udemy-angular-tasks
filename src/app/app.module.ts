@@ -14,13 +14,15 @@ import { AngularFirestoreModule, AngularFirestore  } from "angularfire2/firestor
 
 import { AppComponent } from './app.component';
 import { TaskItemComponent } from './task-item/task-item.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserAnimationsModule,
