@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
-import { Task } from './models/task.model';
-
-const settings = {/* your settings... */ timestampsInSnapshots: true};
+// const settings = {/* your settings... */ timestampsInSnapshots: true};
 
 
 
@@ -13,16 +9,8 @@ const settings = {/* your settings... */ timestampsInSnapshots: true};
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   
-  tasks$: Observable<Task[]>;
-  
-  constructor(private db: AngularFirestore){
-
-  }
-
-  ngOnInit(): void {
-    this.tasks$ = this.db.collection<Task>('/tasks').valueChanges();
-  }
+  constructor(){}
 
 }

@@ -15,6 +15,7 @@ import { AngularFirestoreModule, AngularFirestore  } from "angularfire2/firestor
 import { AppComponent } from './app.component';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TaskService } from './task.service';
 
 
 
@@ -33,7 +34,7 @@ import { TaskListComponent } from './task-list/task-list.component';
     MatLineModule,
     MatSlideToggleModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
