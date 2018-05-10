@@ -4,3 +4,9 @@
 html, body{
     margin: 0px;
 }
+
+.fab-icon-add{
+    position: fixed !important;
+    bottom: 15px;
+    right: 15px;
+}

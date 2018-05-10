@@ -5,6 +5,9 @@ import {
   MatToolbarModule,
   MatListModule,
   MatLineModule,
+  MatIconModule,
+  MatButtonModule,
+  MatDialogModule,
   MatSlideToggleModule
  } from "@angular/material";
 
@@ -16,6 +19,7 @@ import { AppComponent } from './app.component';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskService } from './task.service';
+import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 
 
 
@@ -23,12 +27,19 @@ import { TaskService } from './task.service';
   declarations: [
     AppComponent,
     TaskItemComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskDialogComponent
+  ],
+  entryComponents: [
+    TaskDialogComponent  //implementação necessaria para o funcionamento do Dialog
   ],
   imports: [
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
     MatToolbarModule,
     MatListModule,
     MatLineModule,
