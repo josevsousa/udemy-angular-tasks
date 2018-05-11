@@ -8,7 +8,9 @@ import {
   MatIconModule,
   MatButtonModule,
   MatDialogModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatFormFieldModule,
+  MatInputModule
  } from "@angular/material";
 
 import { environment } from "../environments/environment";
@@ -20,6 +22,7 @@ import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskService } from './task.service';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +40,10 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    FormsModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
     MatDialogModule,
     MatToolbarModule,

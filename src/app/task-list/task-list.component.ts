@@ -24,11 +24,11 @@ export class TaskListComponent {
   }
 
   onPerformTask(task: Task): void {
-    console.log(task)
+    console.log(task + "dddd")
   }
 
   showDialog(): void {
-    this.dialog.open(TaskDialogComponent);
+    this.dialog.open(TaskDialogComponent); 
   }
 
 
