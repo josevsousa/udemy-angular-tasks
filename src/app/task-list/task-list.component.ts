@@ -23,8 +23,10 @@ export class TaskListComponent {
     this.tasks$ = this.taskService.tasks.valueChanges();
   }
 
+  // togle change
   onPerformTask(task: Task): void {
-    console.log(task + "dddd")
+    task.done = !task.done;
+    this.taskService.update(task);
   }
 
   showDialog(): void {

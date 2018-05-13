@@ -23,7 +23,7 @@ export class TaskDialogComponent implements OnInit {
   }
 
   onSave(): void{
-    this.taskService.create(this.task)
+    this.taskService.create(this.task) //enviar o form se for tudo ok exec o then
       .then(()=>{
         console.log('trask create!');
         this.dialogRef.close();

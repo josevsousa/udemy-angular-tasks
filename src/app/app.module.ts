@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     TaskDialogComponent
   ],
   entryComponents: [
-    TaskDialogComponent  //implementação necessaria para o funcionamento do Dialog
+    TaskDialogComponent  //implementação necessaria para o funcionamento do Dialog sendo usado pela forma de passar um component por parametro
   ],
   imports: [
     BrowserAnimationsModule,
