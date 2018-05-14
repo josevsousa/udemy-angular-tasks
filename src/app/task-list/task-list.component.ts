@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Task } from "../models/task.model";
 import { TaskService } from '../task.service';
 import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
@@ -32,7 +32,13 @@ export class TaskListComponent {
   // task? = parametro opcional! 
   showDialog(task?: Task): void {
     console.log(task);
-    this.dialog.open(TaskDialogComponent); 
+    const config: MatDialogConfig<any> = (task)? {data: {task}} : null;
+    this.dialog.open(TaskDialogComponent, config); 
+  }
+
+  onDelete(task: Task): void{
+    this.taskService.delete(task);
+    // console.log(task)
   }
 
 

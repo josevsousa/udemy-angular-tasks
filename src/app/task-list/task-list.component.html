@@ -21,12 +21,13 @@
     let-task = varial local dentro do ng-template  que recebe do matMenuTriggerData um objeto chamdo taskMenuDelete = task
     " let-minhaVar "
   -->
+
   <ng-template matMenuContent let-task="taskMenuDelete">  
     <button mat-menu-item (click)="showDialog(task)">
       <mat-icon>edit</mat-icon>
       <span>Update</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="onDelete(task)">
       <mat-icon>delete</mat-icon>
       <span>Delete</span>
     </button>
