@@ -10,7 +10,8 @@ import {
   MatDialogModule,
   MatSlideToggleModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatMenuModule
  } from "@angular/material";
 
 import { environment } from "../environments/environment";
@@ -45,6 +46,7 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatMenuModule,
     MatDialogModule,
     MatToolbarModule,
     MatListModule,

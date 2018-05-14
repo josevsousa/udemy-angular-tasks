@@ -29,7 +29,9 @@ export class TaskListComponent {
     this.taskService.update(task);
   }
 
-  showDialog(): void {
+  // task? = parametro opcional! 
+  showDialog(task?: Task): void {
+    console.log(task);
     this.dialog.open(TaskDialogComponent); 
   }
 
