@@ -11,7 +11,8 @@ import {
   MatSlideToggleModule,
   MatFormFieldModule,
   MatInputModule,
-  MatMenuModule
+  MatMenuModule,
+  MatProgressSpinnerModule
  } from "@angular/material";
 
 import { environment } from "../environments/environment";
@@ -47,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatIconModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     MatDialogModule,
     MatToolbarModule,
     MatListModule,

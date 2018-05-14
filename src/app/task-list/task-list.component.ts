@@ -4,6 +4,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Task } from "../models/task.model";
 import { TaskService } from '../task.service';
 import { TaskDialogComponent } from '../task-dialog/task-dialog.component';
+import { take } from "rxjs/operators/take";
 
 @Component({
   selector: 'app-task-list',
@@ -14,6 +15,7 @@ export class TaskListComponent {
 
   tasks$: Observable<Task[]>;
   selectTask: Task;
+  spinner = true;
 
   constructor( 
     private  dialog: MatDialog,
@@ -21,6 +23,11 @@ export class TaskListComponent {
 
   ngOnInit(): void{
     this.tasks$ = this.taskService.tasks.valueChanges();
+    this.tasks$
+      .pipe(take(1))  //quando pegar o 1 elemento da nossa lista do firestore
+      .subscribe(()=> {
+        this.spinner = false;
+      })
   }
 
   // togle change

@@ -2,6 +2,8 @@
   <mat-list-ite> </mat-list-ite>
 </mat-list> -->
 
+<mat-spinner class="spinner" diameter='50' strokeWidth='3' *ngIf="spinner"></mat-spinner>
+
 <mat-nav-list>
   <app-task-item
     *ngFor="let task of tasks$ | async"
@@ -9,7 +11,7 @@
     (performTask)="onPerformTask($event)"
     (selectTask)="selectedTask=$event"
     [matMenuTriggerFor]="taskMenu"
-    [matMenuTriggerData]="{taskMenuDelete: task}">
+    [matMenuTriggerData]="{taskMenuUpdateOrDelete: task}">
 </app-task-item>
 </mat-nav-list>
 
@@ -22,7 +24,7 @@
     " let-minhaVar "
   -->
 
-  <ng-template matMenuContent let-task="taskMenuDelete">  
+  <ng-template matMenuContent let-task="taskMenuUpdateOrDelete">  
     <button mat-menu-item (click)="showDialog(task)">
       <mat-icon>edit</mat-icon>
       <span>Update</span>
