@@ -4,6 +4,7 @@ import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/fires
 import { Task } from "./models/task.model";
 import { promise } from 'protractor';
 import { Observable } from 'rxjs/Observable';
+import { CollectionReference } from '@firebase/firestore-types';
 
 @Injectable()
 export class TaskService {
@@ -16,7 +17,9 @@ export class TaskService {
 
   // MONTA UMA INSTANCIA DO TASK SINCRONIZADA LA DO FIRESTORES   
   private setTasks(): void{
-    this.tasks = this.db.collection<Task>('/tasks');
+    this.tasks = this.db.collection<Task>('/tasks',
+      (ref: CollectionReference) => ref.orderBy('done', 'asc').orderBy('title', 'asc')  //ordena os registros done em ordem crescente
+    );
   }
 
   // CRUD GET, CREATE, UPDATE, DELETE
