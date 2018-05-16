@@ -41,7 +41,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule, //a persistence é para manter offline 
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -62,6 +62,6 @@ export class AppModule {
   constructor( private afs: AngularFirestore ) {
     
     afs.firestore.settings({timestampsInSnapshots: true});
- 
+  
   }
  }

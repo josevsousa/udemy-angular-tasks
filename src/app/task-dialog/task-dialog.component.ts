@@ -43,6 +43,7 @@ export class TaskDialogComponent implements OnInit {
         console.log('trask create!');
         this.dialogRef.close();
       }).catch((error)=>{
+        // this.dialogRef.close(); 
         console.log(error);
       })
 
